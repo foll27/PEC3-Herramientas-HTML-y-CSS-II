@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss"><!-- do not remove this line! -->
+    <title>PEC 3 - Herramientas HTML y CSS II</title>
+</head>
+
+<body class="bg-slate-100">
+    <include src="./views/header.html"></include>
+
+    <div class="container min-w-sm mx-auto sm:px-4">
+
+        <include src="./views/unete.html"></include>
+
+        <form>
+            <div class="flex flex-wrap">
+
+                <div class="sm:w-full md:w-1/2 form__item">
+                    <div class="mb-3">
+                        <label for="nombre" class="form-label">Nombre</label>
+                        <input type="text" class="form__input" id="nombre" placeholder="Indica tu nombre completo"
+                            required>
+                    </div>
+                </div>
+
+                <div class="sm:w-full md:w-1/2 form__item">
+                    <div class="mb-3">
+                        <label for="fechaNacimiento" class="form-label">Fecha de nacimiento</label>
+                        <input type="date" class="form__input" id="fechaNacimiento" required>
+                    </div>
+                </div>
+
+                <div class="sm:w-full md:w-1/2 form__item">
+                    <div class="mb-3">
+                        <label for="direccion" class="form-label">Dirección</label>
+                        <input type="text" class="form__input" id="direccion"
+                            placeholder="Indica la dirección donde resides" required>
+                    </div>
+                </div>
+
+                <div class="sm:w-full md:w-1/2 form__item">
+                    <div class="mb-3">
+                        <label for="sexo" class="form-label">Sexo</label><br>
+                        <div class="relative block mb-2 inline-block mr-2">
+                            <input class="absolute mt-1" type="radio" name="sexo" id="sexoFemenino" value="femenino"
+                                required>
+                            <label class="text-gray-700 pl-6 mb-0" for="sexoFemenino">Femenino</label>
+                        </div>
+                        <div class="relative block mb-2 inline-block mr-2">
+                            <input class="absolute mt-1" type="radio" name="sexo" id="sexoMasculino" value="masculino"
+                                required>
+                            <label class="text-gray-700 pl-6 mb-0" for="sexoMasculino">Masculino</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sm:w-full md:w-1/2 form__item">
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Correo electrónico</label>
+                        <input type="email" class="form__input" id="email" placeholder="Inserta tu correo electrónico"
+                            required>
+                    </div>
+                </div>
+
+                <div class="sm:w-full md:w-1/2 form__item">
+                    <div class="mb-3">
+                        <label for="telefono" class="form-label">Teléfono</label>
+                        <input type="tel" class="form__input" id="telefono" placeholder="Ingresa tu teléfono" required>
+                    </div>
+                </div>
+
+                <div class="sm:w-full md:w-1/2 form__item">
+                    <div class="mb-3">
+                        <label for="elo" class="form-label">Seleccione su ELO </label>
+                        <input type="range" class="form-range" id="elo" min="0" max="2800"
+                            oninput="num.value = this.value">
+                    </div>
+                </div>
+
+                <div class="sm:w-full md:w-1/2 form__item">
+                    <div class="mb-3">
+                        <label for="eloInput" class="form-label">Valor </label><br>
+                        <output id="num"> </output>
+                    </div>
+                </div>
+
+                <div class="sm:w-full md:w-1/2 form__item">
+                    <div class="mb-3">
+                        <label for="retrato" class="form-label">Retrato</label>
+                        <input type="file" class="form__input" id="retrato" accept="image/*" required>
+                    </div>
+                </div>
+
+                <div class="sm:w-full md:w-1/2 form__item">
+                    <div class="mb-3">
+                        <label for="tallaCamiseta" class="form-label">Talla de camiseta</label>
+                        <select class="form-select form__input" id="tallaCamiseta" required>
+                            <option value="" selected>Selecciona una talla</option>
+                            <option value="XS">XS</option>
+                            <option value="S">S</option>
+                            <option value="M">M</option>
+                            <option value="L">L</option>
+                            <option value="XL">XL</option>
+                            <option value="XXL">XXL</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="sm:w-full form__item text-center mt-7">
+                    <div>
+                        <button type="submit"
+                            class="inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline bg-blue-600 text-white hover:bg-blue-600">Unirse
+                            al club</button>
+                    </div>
+                </div>
+            </div>
+
+        </form>
+        <br>
+    </div>
+
+    <include src="./views/footer.html"></include>
+
+    <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
+</body>
+
+</html>

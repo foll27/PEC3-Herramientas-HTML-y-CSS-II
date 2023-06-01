@@ -1,0 +1,19 @@
+.form {
+    &__item {
+        @apply pr-4 pl-4;
+    }
+
+    &__input {
+        @apply block appearance-none w-full py-1 px-2 mb-1 text-base leading-normal bg-white text-gray-800 border border-gray-200 rounded;
+    }
+}
+
+.miembros {
+    &__card {
+        @apply relative flex flex-col min-w-0 rounded break-words border bg-white border-gray-300 w-[calc(100%_-_10px)] box-border mb-5 bg-gray-200 p-2
+    }
+
+    &__elo {
+        @apply py-3 px-6 bg-gray-200 border-t border-gray-300 text-center;
+    }
+}
